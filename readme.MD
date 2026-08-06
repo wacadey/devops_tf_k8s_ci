@@ -142,3 +142,23 @@
 ./setup-ci.bat wacadey/devops_tf_k8s_ci  # Windows
 ./setup-ci.sh wacadey/devops_tf_k8s_ci   # Linux / macOS
 ```
+
+- 조정
+  - ci.yml
+    - 5, 12 라인 : 브런치 대상 `main` 수정
+
+- ci 테스트
+  - ~/app/web/index.html
+    ```
+      v 3 => v3
+    ```
+
+- git 반영
+  - github actions 작동되는 영역 제한 : ci.yml 기록
+    ```
+      - "apps/**"
+      - "infra/**"
+      - "scripts/ci/**"
+      - ".github/workflows/ci.yml"
+    ```
+  - add -> commit -> push
