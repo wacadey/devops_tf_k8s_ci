@@ -133,6 +133,12 @@
 ## 전체 인프라 구성 및 최초 web/was 이미지 빌드 -> ECR Push : ci worlflow 진행
 - 최초 (인프라구성) / 수정된 인프라 배포
 ```
-./project.sh deploy  #Linux / macOS
-./project.bat deploy #Windows
+./project.sh deploy  # Linux / macOS
+./project.bat deploy # Windows
+```
+
+- ci 셋업 1회 진행
+```
+./setup-ci.bat wacadey/devops_tf_k8s_ci  # Windows
+./setup-ci.sh wacadey/devops_tf_k8s_ci   # Linux / macOS
 ```
