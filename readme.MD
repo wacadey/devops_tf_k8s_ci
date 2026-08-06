@@ -95,3 +95,7 @@
           ▼
     WEB ECR / WAS ECR
 ```
+
+- 수정 및 추가작업
+  - infra/ 내 수정및 추가작업
+    - terraform.tfvars
