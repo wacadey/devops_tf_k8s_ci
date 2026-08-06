@@ -99,3 +99,33 @@
 - 수정 및 추가작업
   - infra/ 내 수정및 추가작업
     - terraform.tfvars
+  - git 관련 id 조회
+    ```
+      # github_owner_id, github_ci_repository_id 값 획득
+      # gh 명령어 사용
+      # 설치
+        # 윈도우        
+          winget install --id GitHub.cli
+        # 맥        
+          brew install gh
+
+      # 공통
+        # 로그인
+        gh auth login
+        ---
+        GitHub.com
+        HTTPS
+        Login with a web browser
+        Press Enter to open https://github.com/login/device in your browser
+        로그인 수행 > continue > 발급퇸 키 8자리 붙여넣기 > continue
+        `Au... github` 버튼 클릭 > 설정완료
+
+      # ID 조회
+      gh api repos/wacadey/devops_tf_k8s_ci --jq "{owner_id: .owner.id, repository_id: .id, created_at: .created_at}"
+    ```
+
+    <!-- {
+  "created_at": "2026-08-06T00:32:53Z",
+  "owner_id": 139854118,
+  "repository_id": 1324590360
+} -->

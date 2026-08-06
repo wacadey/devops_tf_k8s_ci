@@ -1,4 +1,4 @@
-aws_region   = "ap-northeast-2"
+aws_region   = "us-east-1"
 project_name = "de-ai-12-devops-tf-eks-auto"
 environment  = "dev"
 
@@ -23,5 +23,5 @@ github_ci_branch         = "main" # 어던 브런치에서만 ECR push를 위한
 # 최초라면 true, 만약 1번 이상 수행 => aws내 iam 본인 계정에 등록되어있다면 false로 설정
 create_github_oidc_provider = true
 # 조회발급 -> 추후 세팅 => git 로그인 처리후 조회 => 모두 숫자임
-github_owner_id         = ""
-github_ci_repository_id = ""
+github_owner_id         = "139854118"
+github_ci_repository_id = "1324590360"
