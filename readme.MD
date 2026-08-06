@@ -122,10 +122,17 @@
 
       # ID 조회
       gh api repos/wacadey/devops_tf_k8s_ci --jq "{owner_id: .owner.id, repository_id: .id, created_at: .created_at}"
+      ---
+      {
+        "created_at": "2026-08-06T00:32:53Z",
+        "owner_id": 139854118,
+        "repository_id": 1324590360
+      }
     ```
 
-    <!-- {
-  "created_at": "2026-08-06T00:32:53Z",
-  "owner_id": 139854118,
-  "repository_id": 1324590360
-} -->
+## 전체 인프라 구성 및 최초 web/was 이미지 빌드 -> ECR Push : ci worlflow 진행
+- 최초 (인프라구성) / 수정된 인프라 배포
+```
+./project.sh deploy  #Linux / macOS
+./project.bat deploy #Windows
+```
